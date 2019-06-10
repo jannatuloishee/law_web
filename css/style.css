@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans&display=swap');
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;*/
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+
+}
+img{
+    max-width: 100%;
+}
+
+.container{
+    width: 1060px;
+    margin: auto;
+    overflow: hidden;
+    }
+    
+.heading{
+    position: relative;
+    padding: 20px 0 25px;
+}
+.heading:after{
+    content: "";
+}
+.heading:before{
+    content: "";
+    width: 60px;
+    height: 5px;
+    background: #f1602a;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.heading h2{
+    color: #204f87;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #b0b0b1;
+    margin-bottom: 30px;
+}
+
+/*************Header*************/
+header{
+    padding: 32px 0;
+}
+.logo{
+    width: 20%;
+    float: left;
+}
+.logo h1{
+    color: #28377e;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.logo a{
+    display: block;
+}
+nav{
+    width: 80%;
+    float: left;
+}
+nav ul{
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+nav ul li{
+    margin-left: 20px;
+}
+nav ul li a{
+    font-size: 12px;
+    color: #204f87;
+    font-weight: 600;
+    padding: 10px;
+    display: block;
+    transition: all 0.4s ease-in-out;
+}
+nav ul li a:hover{
+    color: #f2622c
+}
+
+/*********Banner Section*************/
+.banner-section{
+    position: relative;
+    background-image:url(../image/blue_banner.png);
+    min-height: 700px;
+    background-repeat: no-repeat;
+}
+.banner-section img{}
+.banner-content{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.banner-content h1{
+    font-size: 82px;
+    font-weight: 700;
+    max-width: 851px;
+}
+.arrow-down{
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 20px;
+    animation-name: up-down;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+@keyframes up-down{
+
+    0%{
+    transform: translate(-50%, 0);
+    }
+
+    100%{
+    transform: translate(-50%, 30px);
+    }
+}
+
+/*********Who We Are Section*************/
+.who-we-are{
+    padding: 120px 0 200px;
+}
+.whoweare-content{
+    width: 70%;
+    float: left;
+    padding-right: 150px;
+    padding-top: 35px;
+}
+
+/*********whoweare-img*************/
+.whoweare-img{
+    width: 30%;
+    float: left;
+}
+.whoweare-img img{}
+
+/*********What We Do Section*********/
+.what-we-do-section{
+    padding: 80px 0 125px;
+    background: #f8f8f8;
+    background-image: url(../image/what_we_do_bg.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.what-we-do{
+    width: 33.33%;
+    float: left;
+    padding: 10px;
+}
+.what-we-do-section .heading:before{
+
+content: "";
+
+width: 60px;
+
+height: 5px;
+
+background: #f1602a;
+
+position: absolute;
+
+left: 50%;
+
+top: 0;
+
+transform: translateX(-50%);
+}
+.what-we-do-part{
+    position: relative;
+}
+.what-we-do-part:after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    z-index: 0;
+    transition: all 0.6s ease
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2b2f85+0,2b2f85+100&0+0,0.86+99 */
+background: -moz-linear-gradient(top, rgba(43,47,133,0) 0%, rgba(43,47,133,0.86) 99%, rgba(43,47,133,0.86) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(43,47,133,0) 0%,rgba(43,47,133,0.86) 99%,rgba(43,47,133,0.86) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(43,47,133,0) 0%,rgba(43,47,133,0.86) 99%,rgba(43,47,133,0.86) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002b2f85', endColorstr='#db2b2f85',GradientType=0 ); /* IE6-9 */
+}
+.what-we-do-part:hover:after{
+    height: 100%;
+}
+.what-we-do h4{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    font-size: 26px;
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+    opacity:0;
+    z-index: 1;
+}
+.what-we-do:hover h4{
+    top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 1;
+}
+.what-we-do a{
+    position: absolute;
+    bottom: 30px;
+    left: 40%;
+    transform: translate(-40%,0);
+    color: white;
+    transition: all 0.6s ease-in-out;
+    opacity: 0;
+    z-index: 1;
+}
+.what-we-do:hover a{
+    opacity: 1;
+    bottom: 30px;
+    left: 50%;
+}
+.what-we-do img{
+    width: 100%;
+}
+.what-we-do-section .heading{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.what-we-do-section .before{
+    
+}
+
+/*********Our Attorneys*********/
+.attorney-section{
+    background-image: url(../image/attorney_bg.png);
+    /* height: 1350px; */
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px 0 200px;
+}
+.attorney-content{
+    width: 30%;
+    float: left;
+}
+.attorney-content .heading h2{
+    color: white;
+    width: 10px;
+}
+.see-more{
+    color: #f2622c;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 11px;
+}
+
+/*********Attorney images section*********/
+.attorney-images{
+    width: 70%;
+    float: left;
+    /* margin-top: 215px; */
+}
+.attorney{
+    width: 50%;
+    float: left;
+    position: relative;
+    padding: 10px;
+}
+.attorney img{
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+}
+.attorney h4{
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+}
+.attorney-part:hover h4{
+    bottom: 30px;
+    right: 50%;
+    opacity: 1;
+}
+
+.attorney-part{
+    position: relative;
+    overflow: hidden;
+}
+
+.attorney-part:hover img{
+    transform: scale(1.1); transform: rotate(2deg);
+}
+.attorney-part:after{
+    content: "";
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2b2f85+0,2b2f85+100&0+0,0.86+99 */
+    background: -moz-linear-gradient(top, rgba(43,47,133,0) 0%, rgba(43,47,133,0.86) 99%, rgba(43,47,133,0.86) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(43,47,133,0) 0%,rgba(43,47,133,0.86) 99%,rgba(43,47,133,0.86) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(43,47,133,0) 0%,rgba(43,47,133,0.86) 99%,rgba(43,47,133,0.86) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002b2f85', endColorstr='#db2b2f85',GradientType=0 ); /* IE6-9 */
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    transition: all 0.4s ease-in-out;
+}
+.attorney-part:hover:after{
+    height: 100%;
+    
+}
+
+/*********Our languages*********/
+.languages-section{
+    padding: 125px 0 140px;
+}
+.languages-section .heading{margin-bottom: 55px;text-align: center;}
+.languages-section .heading:before{
+    content: "";
+    width: 60px;
+    height: 5px;
+    background: #f1602a;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+.language-box{
+    width: 25%;
+    float: left;
+    padding: 10px;
+}
+.language-box h5{
+    color: #204f87;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+/*********Contact Section*********/
+.contact-section{
+    background: #28377e;
+    padding-top: 74px;
+}
+.contact-section .heading{
+    text-align: center;
+}
+.contact-section .heading h2{
+    color: white
+}
+.contact-section .heading:before{
+    
+content: "";
+    
+width: 60px;
+    
+height: 5px;
+    
+background: #f1602a;
+    
+position: absolute;
+    
+left: 50%;
+    
+top: 0;
+    
+transform: translateX(-50%);
+}
+.contact-form{
+    max-width: 50%;
+    margin: auto;
+}
+.contact-form form{
+    margin-bottom: 90px;
+}
+.contact-form form input{
+    
+width: 100%;
+    
+background: #f0f8ff00;
+    
+border: 0;
+    
+border-bottom: 1px solid #b0b0b166;
+    
+padding: 10px;
+    
+color: white;
+    
+margin-bottom: 15px;
+}
+.contact-form form textarea{
+    width: 100%;
+    background: #f0f8ff00;
+    border: 0;
+    border-bottom: 1px solid #b0b0b166;
+    color: white;
+    margin-bottom: 15px;
+    padding: 10px;
+    }
+.contact-form form input.btn{
+    width: auto !important;
+    display: block;
+    margin: auto;
+    margin-bottom: 0 !important;
+    background: #f1602a;
+    border-bottom: 0;
+    font-weight: 600;
+    padding: 15px 70px;
+}
+textarea:focus, input:focus{
+    outline: none;
+    border-bottom: 1px solid #f1602a !important;
+}
+
+/*********Footer Section*********/
+footer{
+    padding: 24px 0 13px;
+    background: #0c1334;
+}
+.copyright{width: 20%;float: left;}
+.copyright p{
+    font-size: 14px;
+    color: #616ca8;
+    font-family: open sans-serif;
+    width: 250px;
+    margin-left: 45px;
+    padding-top: 17px;
+}
+.social{
+    width: 80%;
+    float: left;
+}
+.social ul{display: flex;justify-content: flex-end;padding-top: 16px;}
+.social ul li{
+    margin-left: 25px;
+}
+.social ul li a{
+    color: #b1b8dd;
+    transition: all 0.4s ease-in-out;
+    display: block;
+}
+.social ul li a:hover{
+    color: white;
+}
